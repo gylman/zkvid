@@ -1,6 +1,7 @@
 import React from 'react';
 import Pixel from './Pixel';
 import styled from 'styled-components';
+import cuid from 'cuid';
 
 const F = styled.div`
   display: flex;
@@ -13,8 +14,7 @@ const Frame = ({ frame }) => {
   return (
     <F>
       {frame.map((pixel) => {
-        console.log(pixel);
-        return <Pixel on={pixel.c} />;
+        return <Pixel on={pixel.c} key={cuid()} />;
       })}
     </F>
   );

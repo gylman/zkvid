@@ -20,6 +20,34 @@ for (let frame = 0; frame < l; frame++) {
   videofile.push(makeFrame());
 }
 
+// videofile.map((frame) => console.log(frame));
+const ex = [
+  {
+    x: 0,
+    y: 0,
+    c: 1,
+    z: 5,
+  },
+  {
+    x: 1,
+    y: 0,
+    c: 1,
+    z: 5,
+  },
+  {
+    x: 0,
+    y: 1,
+    c: 0,
+    z: 5,
+  },
+  {
+    x: 1,
+    y: 1,
+    c: 0,
+    z: 5,
+  },
+];
+
 function App() {
   return <Video frames={videofile}></Video>;
 }

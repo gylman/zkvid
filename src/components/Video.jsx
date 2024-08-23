@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Frame from './Frame';
+import cuid from 'cuid';
 
 const V = styled.div`
   display: flex;
@@ -15,7 +16,7 @@ const Video = ({ frames }) => {
   return (
     <V>
       {frames.map((frame) => (
-        <Frame frame={frame} />
+        <Frame frame={frame} key={cuid()} />
       ))}
     </V>
   );
